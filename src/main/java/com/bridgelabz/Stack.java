@@ -23,7 +23,15 @@ public class Stack {
         temp.next = top;
         top = temp;
     }
-
+    public void pop(){
+       if(top == null){
+        System.out.println("Stack is Empty");
+       }
+       else{
+        Node temp = top;
+        top = top.next;
+       }
+    }
     public void display(){
         if(top ==  null){
             System.out.print("Stack is empty");
@@ -42,6 +50,9 @@ public class Stack {
           object.push(70);
           object.push(30);
           object.push(56);
+          object.display();
+          System.out.println();
+          object.pop();
           object.display();
     }
    
